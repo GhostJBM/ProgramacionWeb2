@@ -9,16 +9,18 @@ html, body {
 
 div{
     display: flex;
-    justify-content: center;     /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical (opcional) */
-    height: 100vh;      
+    justify-content:left;     /* Centrado horizontal */
+    align-items:normal;     /* Centrado vertical (opcional) */     
+    height: fit-content; 
 }
 
 button{
-    size: 2000px 2000px 2000px 2000px;
+    width: 50px;
+    height: 25px;
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 h1{

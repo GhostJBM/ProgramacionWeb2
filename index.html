@@ -5,33 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="FrontEnd/css/styleBody.css">
     <link rel="stylesheet" href="FrontEnd/css/btn_custom_1.css">
-    <title>primary key = 1</title>
+    <title>Primera pagina web</title>
 </head>
 <body>
-    <h1>Dick Guy y Adrian</h1>
+    <h1>Bienvenido a mi web page</h1>
 
-    <h2>Capitulo 1</h2>
+    <h2>Cabeceras</h2>
 
-    <p>Se encontraba Adrian en una calida tarde de septiembre, <br>
-       esperando en el baño, en eso aparecio su amado DickGuy <br>
-       asustado y sobre todo sorprendido decidio dirijir la palabra <br>
-       con un suave <span style="color: black;">!Hola</span></p>
+    <p>el h1 sirve para titulos mas importantes, h2 igual pero para sub_titulos, h3 igual hasta h6 </p>
+
+     <h2>Links</h2>
     <div>
-        <button class="btn_custom_1" id="btn_1">Hola
+       
+        <p>existen varias maneras de poner varios links
+            las mas comunes son con la etiqueta "a"
+            de aqui estan los button_links, ejemplos;
+        </p>
+        </div>
+        <h3>links con a</h3>
+        <div>
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3Dt4ppgrfLhis&ved=2ahUKEwjQ8ujhmqWTAxVWTTABHYR9JvUQtwJ6BAgQEAI&usg=AOvVaw3Zha8QcuGzqmOHkQcdb2xx">Hola soy in link con a</a>
         
-        </button>
-        <ul>
+        </div>
+
+         <h3>button links</h3>
+        <div>
+       
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3Dt4ppgrfLhis&ved=2ahUKEwjQ8ujhmqWTAxVWTTABHYR9JvUQtwJ6BAgQEAI&usg=AOvVaw3Zha8QcuGzqmOHkQcdb2xx"><button>hola soy un boton y tengo un link</button></a>
+        </div>
+    
+        <h2>boton normal con funcionalidad .js</h2>
+    <button class="btn_custom_1" id="btn_1">Hola
+  </button>
+  <div>
+        <ul> List           
             <li>21</li>
             <li>23</li>
             <li>34</li>
         </ul>
-        <ol>
+        <ol style="list-style-type: lower-alpha;"> List order numbers
             <li>1</li>
             <li>2</li>
             <li>3</li>
         </ol>
     </div>
-
     <table>
         <thead>
             <th>id</th>
@@ -40,14 +57,78 @@
         </thead>
         <tbody>
             <td> 1 </td>
-            <td>Marcelo</td>
-            <td>zy</td>
+            <td>Yo</td>
+            <td>YoPeroComoApellido</td>
         </tbody>
     </table>
-    <!-- dsiaojfk kl -->
+
+    <h2>Form</h2>
+    <p>los formularios sirven para guardar y enviar información</p>
+    <div>
+        <form action="" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" placeholder="nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" placeholder="apellido">
+            <button>Enviar</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Audios</h2>
+       <audio controls src="https://youtu.be/n2uaB33EHZE?si=HCYpIO_G0ypTPRjY">
+        Your browser does not support the audio element.</audio>
+
+        <h2>Videos</h2>
+        <iframe width="400" src="https://youtu.be/yrh9fdwEbJI?si=0hva4LkrlttD7Zob" title="La mejor carta por año en CR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+        </iframe>
+    </div>
+
+    <div>
+        <h2>Ejemplo API</h2>
+        <section>
+        <p>Ejemplo de Geolocalización API:</p>
+        <button onclick="getLocation()" fdprocessedid="u2nn9">Obtener mi ubicación</button>
+        <p id="location"></p>
+    </section>
+    </div>
+
+    <div>
+        <section>
+        <h2>HTML Graphics</h2>
+        <p>Ejemplo de dibujo con Canvas:</p>
+        <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+    </section>
+    </div>
 
 
     <!-- scripts -->
      <script src="FrontEnd/js/action_btn.js"></script>
+     <script>
+        // HTML Graphics - Dibujo en Canvas
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 100);
+
+        // HTML APIs - Geolocalización
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById("location").innerHTML = 
+                        "Latitud: " + position.coords.latitude + "<br>Longitud: " + position.coords.longitude;
+                });
+            } else {
+                document.getElementById("location").innerHTML = "La geolocalización no es soportada por este navegador.";
+            }
+        }
+
+        //butonId Evento: Onclick
+        function myFunction(){
+            window.location.href = "https://www.youtube.com";
+            console.log("exito");
+        }
+    </script>
+    
 </body>
 </html>
